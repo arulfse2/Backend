@@ -1,0 +1,33 @@
+Product projects
+---------------------------------------
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Admin\COVID19Tracker.Admin.csproj
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker\COVID19Tracker.csproj
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic\COVID19Tracker.Geographic.csproj
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.User\COVID19Tracker.User.csproj
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Gateway\COVID19Tracker.Gateway.csproj
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\COVID19Tracker.Auth.csproj
+
+
+Test projects
+---------------------------------------
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Test\COVID19Tracker.Test.csproj
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.User.Test\COVID19Tracker.User.Test.csproj
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Admin.Test\COVID19Tracker.Admin.Test.csproj
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic.Test\COVID19Tracker.Geographic.Test.csproj
+
+
+Invalid projects
+---------------------------------------
+{none}
+
+
+Skipped projects
+---------------------------------------
+{none}
+
+
+Excluded projects
+---------------------------------------
+{none}
+
+

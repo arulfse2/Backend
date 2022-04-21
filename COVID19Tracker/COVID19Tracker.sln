@@ -15,13 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker.Gateway", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker.Auth", "COVID19Tracker.Auth\COVID19Tracker.Auth.csproj", "{4472E6F0-1C61-480B-92DC-3923B7F13B04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.Test", "COVID19Tracker.Test\COVID19Tracker.Test.csproj", "{E79C0092-1444-4C1A-B9FF-0B98C420C50B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker.Test", "COVID19Tracker.Test\COVID19Tracker.Test.csproj", "{E79C0092-1444-4C1A-B9FF-0B98C420C50B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.User.Test", "COVID19Tracker.User.Test\COVID19Tracker.User.Test.csproj", "{C5F89468-F70E-41EB-9406-69B3DA796229}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker.User.Test", "COVID19Tracker.User.Test\COVID19Tracker.User.Test.csproj", "{C5F89468-F70E-41EB-9406-69B3DA796229}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.Admin.Test", "COVID19Tracker.Admin.Test\COVID19Tracker.Admin.Test.csproj", "{00789749-B34E-4074-98E0-69D6D1FAB781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker.Admin.Test", "COVID19Tracker.Admin.Test\COVID19Tracker.Admin.Test.csproj", "{00789749-B34E-4074-98E0-69D6D1FAB781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.Geographic.Test", "COVID19Tracker.Geographic.Test\COVID19Tracker.Geographic.Test.csproj", "{33308D42-E467-4C0A-A73D-12E6C480544F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker.Geographic.Test", "COVID19Tracker.Geographic.Test\COVID19Tracker.Geographic.Test.csproj", "{33308D42-E467-4C0A-A73D-12E6C480544F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.Core", "COVID19Tracker.Core\COVID19Tracker.Core.csproj", "{1ABBB67E-7ABD-4F25-B75F-AB3D8B740B85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{33308D42-E467-4C0A-A73D-12E6C480544F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33308D42-E467-4C0A-A73D-12E6C480544F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33308D42-E467-4C0A-A73D-12E6C480544F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ABBB67E-7ABD-4F25-B75F-AB3D8B740B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ABBB67E-7ABD-4F25-B75F-AB3D8B740B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ABBB67E-7ABD-4F25-B75F-AB3D8B740B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ABBB67E-7ABD-4F25-B75F-AB3D8B740B85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

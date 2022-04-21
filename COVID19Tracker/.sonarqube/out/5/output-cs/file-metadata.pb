@@ -1,0 +1,12 @@
+\
+SC:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\Config.csutf-8p
+gC:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\Helpers\IdentityExtensions.csutf-8]
+TC:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\Program.csutf-8]
+TC:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\Startup.csutf-8t
+kC:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\UserServices\AppProfileService.csutf-8Ñ
+{C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\UserServices\AppResourceOwnerPasswordValidator.csutf-8j
+aC:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\UserServices\AppUser.csutf-8r
+iC:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\UserServices\IUserRepository.csutf-8q
+hC:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\UserServices\UserRepository.csutf-8ú
+êC:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.csutf-8ë
+ÖC:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\obj\Debug\netcoreapp3.1\COVID19Tracker.Auth.AssemblyInfo.csutf-8

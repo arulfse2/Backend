@@ -1,0 +1,17 @@
+﻿C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\Config.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\Helpers\IdentityExtensions.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\Program.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\Startup.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\UserServices\AppProfileService.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\UserServices\AppResourceOwnerPasswordValidator.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\UserServices\AppUser.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\UserServices\IUserRepository.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\UserServices\UserRepository.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\obj\Debug\netcoreapp3.1\COVID19Tracker.Auth.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\appsettings.Development.json
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\appsettings.json
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\Dockerfile
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\tempkey.jwk
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Auth\Properties\launchSettings.json
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\.dockerignore

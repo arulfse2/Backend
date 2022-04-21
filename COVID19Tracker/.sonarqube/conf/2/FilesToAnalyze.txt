@@ -1,0 +1,11 @@
+﻿C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic\Controllers\WeatherForecastController.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic\Program.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic\Startup.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic\WeatherForecast.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic\obj\Debug\netcoreapp3.1\COVID19Tracker.Geographic.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic\appsettings.Development.json
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic\appsettings.json
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic\Dockerfile
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Geographic\Properties\launchSettings.json
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\.dockerignore
