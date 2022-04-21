@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "b7N2izkgK2j42wR+fyBLntNoajWONWhwKMdAdl1ZrKtWcCWDhCBwCQPp/hpKbNYEZiYxQx9g2du5+2DSkwJ70w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\Backend\\COVID19Tracker\\COVID19Tracker\\COVID19Tracker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+  ],
+  "logs": []
+}
