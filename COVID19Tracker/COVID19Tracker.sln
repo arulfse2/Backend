@@ -3,17 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker", "COVID19Tracker\COVID19Tracker.csproj", "{94A38F6E-8DB8-4A9F-BD13-CDAF4F9C62B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker", "COVID19Tracker\COVID19Tracker.csproj", "{94A38F6E-8DB8-4A9F-BD13-CDAF4F9C62B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.Admin", "COVID19Tracker.Admin\COVID19Tracker.Admin.csproj", "{17EBD91C-EA5E-41E9-BDC7-B169AAA07A5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker.Admin", "COVID19Tracker.Admin\COVID19Tracker.Admin.csproj", "{17EBD91C-EA5E-41E9-BDC7-B169AAA07A5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.Geographic", "COVID19Tracker.Geographic\COVID19Tracker.Geographic.csproj", "{F497FECC-3AB6-4E3A-B82A-A750B534C526}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker.Geographic", "COVID19Tracker.Geographic\COVID19Tracker.Geographic.csproj", "{F497FECC-3AB6-4E3A-B82A-A750B534C526}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.User", "COVID19Tracker.User\COVID19Tracker.User.csproj", "{E9B88E01-9608-40F8-B20A-B240329A745A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker.User", "COVID19Tracker.User\COVID19Tracker.User.csproj", "{E9B88E01-9608-40F8-B20A-B240329A745A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.Gateway", "COVID19Tracker.Gateway\COVID19Tracker.Gateway.csproj", "{6F35619B-C97C-4D8D-A8E7-9BFD5D64B7C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker.Gateway", "COVID19Tracker.Gateway\COVID19Tracker.Gateway.csproj", "{6F35619B-C97C-4D8D-A8E7-9BFD5D64B7C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.Auth", "COVID19Tracker.Auth\COVID19Tracker.Auth.csproj", "{4472E6F0-1C61-480B-92DC-3923B7F13B04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COVID19Tracker.Auth", "COVID19Tracker.Auth\COVID19Tracker.Auth.csproj", "{4472E6F0-1C61-480B-92DC-3923B7F13B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.Test", "COVID19Tracker.Test\COVID19Tracker.Test.csproj", "{E79C0092-1444-4C1A-B9FF-0B98C420C50B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.User.Test", "COVID19Tracker.User.Test\COVID19Tracker.User.Test.csproj", "{C5F89468-F70E-41EB-9406-69B3DA796229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.Admin.Test", "COVID19Tracker.Admin.Test\COVID19Tracker.Admin.Test.csproj", "{00789749-B34E-4074-98E0-69D6D1FAB781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COVID19Tracker.Geographic.Test", "COVID19Tracker.Geographic.Test\COVID19Tracker.Geographic.Test.csproj", "{33308D42-E467-4C0A-A73D-12E6C480544F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +53,22 @@ Global
 		{4472E6F0-1C61-480B-92DC-3923B7F13B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4472E6F0-1C61-480B-92DC-3923B7F13B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4472E6F0-1C61-480B-92DC-3923B7F13B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E79C0092-1444-4C1A-B9FF-0B98C420C50B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E79C0092-1444-4C1A-B9FF-0B98C420C50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E79C0092-1444-4C1A-B9FF-0B98C420C50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E79C0092-1444-4C1A-B9FF-0B98C420C50B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F89468-F70E-41EB-9406-69B3DA796229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F89468-F70E-41EB-9406-69B3DA796229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F89468-F70E-41EB-9406-69B3DA796229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F89468-F70E-41EB-9406-69B3DA796229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00789749-B34E-4074-98E0-69D6D1FAB781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00789749-B34E-4074-98E0-69D6D1FAB781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00789749-B34E-4074-98E0-69D6D1FAB781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00789749-B34E-4074-98E0-69D6D1FAB781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33308D42-E467-4C0A-A73D-12E6C480544F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33308D42-E467-4C0A-A73D-12E6C480544F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33308D42-E467-4C0A-A73D-12E6C480544F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33308D42-E467-4C0A-A73D-12E6C480544F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
