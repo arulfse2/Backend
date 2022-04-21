@@ -6,9 +6,9 @@ namespace COVID19Tracker.Auth
 {
     public class AppResourceOwnerPasswordValidator : IResourceOwnerPasswordValidator
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IAuthRepository _userRepository;
 
-        public AppResourceOwnerPasswordValidator(IUserRepository userRepository)
+        public AppResourceOwnerPasswordValidator(IAuthRepository userRepository)
         {
             _userRepository = userRepository;
         }

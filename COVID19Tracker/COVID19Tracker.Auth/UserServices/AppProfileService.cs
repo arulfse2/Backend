@@ -13,9 +13,9 @@ namespace COVID19Tracker.Auth
         protected readonly ILogger Logger;
 
 
-        protected readonly IUserRepository _userRepository;
+        protected readonly IAuthRepository _userRepository;
 
-        public AppProfileService(IUserRepository userRepository, ILogger<AppProfileService> logger)
+        public AppProfileService(IAuthRepository userRepository, ILogger<AppProfileService> logger)
         {
             _userRepository = userRepository;
             Logger = logger;

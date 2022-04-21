@@ -6,7 +6,7 @@ namespace COVID19Tracker.Auth
     {
         public static IIdentityServerBuilder AddAppUserStore(this IIdentityServerBuilder builder)
         {
-            builder.Services.AddSingleton<IUserRepository, AuthRepository>();
+            builder.Services.AddSingleton<IAuthRepository, AuthRepository>();
             builder.AddProfileService<AppProfileService>();
             builder.AddResourceOwnerValidator<AppResourceOwnerPasswordValidator>();
 

@@ -54,6 +54,20 @@ namespace COVID19Tracker.Core.Repositories
             return await _users.Find(new BsonDocument()).ToListAsync();
         }
 
+        public async Task<bool> GetUserByEmailAndPassword(string email, string password)
+        {
+            User usr = new User();
+            try
+            {
+                usr = await _users.FindAsync(x => x.Email.ToLower() == email.ToLower() && x.Password.ToLower() == password.ToLower()).Result.FirstOrDefaultAsync();
+            }
+            catch (MongoException)
+            {
+                throw new Exception("Get user failed");
+            }
+            return usr != null ? true : false;
+        }
+
         public async Task<User> GetUserById(Guid userId)
         {
             User usr = new User();

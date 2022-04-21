@@ -12,5 +12,6 @@ namespace COVID19Tracker.Core.Contracts
         Task<bool> DeleteUser(Guid userId);
         Task<IEnumerable<User>> GetAllUsers();
         Task<User> GetUserById(Guid userId);
+        Task<bool> GetUserByEmailAndPassword(string email, string password);
     }
 }
