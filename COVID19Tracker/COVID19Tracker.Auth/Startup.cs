@@ -8,7 +8,6 @@ using COVID19Tracker.Core.Contracts;
 using COVID19Tracker.Core.Repositories;
 using COVID19Tracker.Core.Query;
 using COVID19Tracker.Core.Entities;
-using MongoDB.Driver;
 using Microsoft.Extensions.Configuration;
 
 namespace COVID19Tracker.Auth
@@ -34,6 +33,10 @@ namespace COVID19Tracker.Auth
               .AddDeveloperSigningCredential()
               .AddAppUserStore();
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddOptions();
+            var userConfig = Configuration.GetSection("DatabaseSettings:UserConfig");
+            services.Configure<UserConfig>(userConfig);
+            services.AddAutoMapper(typeof(Startup));
             //services.AddSingleton<IMongoClient>(c => {
             //    var ConnectionString = Configuration["DatabaseSettings:ConnectionString"];
             //    return new MongoClient(ConnectionString);
@@ -42,7 +45,8 @@ namespace COVID19Tracker.Auth
             //    c.GetService<IMongoClient>().StartSession());
             services.AddTransient<IUserService, UserService>();
 
-            services.AddTransient<IRequestHandler<GetUserByEmailAndPasswordQuery, bool>, GetUserByEmailAndPasswordQueryHandler>();
+            services.AddTransient<IRequestHandler<GetUserByEmailAndPasswordQuery, User>, GetUserByEmailAndPasswordQueryHandler>();
+            services.AddTransient<IRequestHandler<GetUserByEmailQuery, User>, GetUserByEmailQueryHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

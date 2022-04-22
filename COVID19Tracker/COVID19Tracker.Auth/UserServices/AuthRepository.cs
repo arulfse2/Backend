@@ -1,25 +1,25 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using MediatR;
+using COVID19Tracker.Core.Query;
+using AutoMapper;
 
 namespace COVID19Tracker.Auth
 {
     public class AuthRepository : IAuthRepository
     {
-        private readonly List<AppUser> _users = new List<AppUser>
-        {
-            new AppUser{
-               SubjectId = Guid.NewGuid().ToString().ToUpper(),
-               UserName = "fse3admin",
-               Password = "pass@word1",
-               Email = "arulprakash.s@cognizant.com"
-            }
-        };
+        private readonly IMediator _mediator;
+        private readonly IMapper _mapper;
 
-        public bool ValidateCredentials(string username, string password)
+        public AuthRepository(IMapper mapper, IMediator mediator)
         {
-            var user = FindByUsername(username);
+            _mapper = mapper;
+            _mediator = mediator;
+        }
+
+        public async Task<bool> ValidateCredentials(string email, string password)
+        {
+            var user = await FindByEmail(email);
             if (user != null)
             {
                 return user.Password.Equals(password);
@@ -28,15 +28,19 @@ namespace COVID19Tracker.Auth
             return false;
         }
 
-        public Task<AppUser> FindBySubjectId(string subjectId)
+        public async Task<AppUser> FindBySubjectId(string subjectId)
         {
-            var list = _users.FirstOrDefault(x => x.SubjectId == subjectId);
-            return Task.FromResult(list);
+            Guid id = Guid.Parse(subjectId);;
+            var res = await _mediator.Send(new GetUserByIdQuery { Id = id });
+            var user = _mapper.Map<AppUser>(res);
+            return user;
         }
 
-        public AppUser FindByUsername(string username)
+        public async Task<AppUser> FindByEmail(string email)
         {
-            return _users.FirstOrDefault(x => x.UserName.Equals(username, StringComparison.OrdinalIgnoreCase));
+            var res = await _mediator.Send(new GetUserByEmailQuery { Email = email });
+            var user = _mapper.Map<AppUser>(res);
+            return user;
         }
     }
 }

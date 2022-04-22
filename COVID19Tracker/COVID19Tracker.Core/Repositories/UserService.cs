@@ -12,7 +12,7 @@ namespace COVID19Tracker.Core.Repositories
     {
         private readonly IMongoCollection<User> _users;
         private readonly IMongoClient _client;
-        public UserService(IDatabaseSettings databaseSettings)
+        public UserService(DatabaseSettings databaseSettings)
         {
             _client = new MongoClient(databaseSettings.UserConfig.ConnectionString);
             var database = _client.GetDatabase(databaseSettings.UserConfig.DatabaseName);
@@ -54,7 +54,21 @@ namespace COVID19Tracker.Core.Repositories
             return await _users.Find(new BsonDocument()).ToListAsync();
         }
 
-        public async Task<bool> GetUserByEmailAndPassword(string email, string password)
+        public async Task<User> GetUserByEmail(string email)
+        {
+            User usr = new User();
+            try
+            {
+                usr = await _users.FindAsync(x => x.Email.ToLower() == email.ToLower()).Result.FirstOrDefaultAsync();
+            }
+            catch (MongoException)
+            {
+                throw new Exception("Get user failed");
+            }
+            return usr;
+        }
+
+        public async Task<User> GetUserByEmailAndPassword(string email, string password)
         {
             User usr = new User();
             try
@@ -65,7 +79,7 @@ namespace COVID19Tracker.Core.Repositories
             {
                 throw new Exception("Get user failed");
             }
-            return usr != null ? true : false;
+            return usr;
         }
 
         public async Task<User> GetUserById(Guid userId)

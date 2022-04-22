@@ -15,9 +15,10 @@ namespace COVID19Tracker.Auth
 
         public Task ValidateAsync(ResourceOwnerPasswordValidationContext context)
         {
-            if (_userRepository.ValidateCredentials(context.UserName, context.Password))
+            var res = Task.Run(() => _userRepository.ValidateCredentials(context.UserName, context.Password)).Result;
+            if (res)
             {
-                var user = _userRepository.FindByUsername(context.UserName);
+                var user = Task.Run(() => _userRepository.FindByEmail(context.UserName)).Result;
                 context.Result = new GrantValidationResult(user.SubjectId, OidcConstants.AuthenticationMethods.Password);
             }
 

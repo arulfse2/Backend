@@ -6,7 +6,7 @@ using MediatR;
 
 namespace COVID19Tracker.Core.Query
 {
-    public class GetUserByEmailAndPasswordQueryHandler : IRequestHandler<GetUserByEmailAndPasswordQuery, bool>
+    public class GetUserByEmailAndPasswordQueryHandler : IRequestHandler<GetUserByEmailAndPasswordQuery, User>
     {
         private readonly IUserService _userService;
 
@@ -15,7 +15,7 @@ namespace COVID19Tracker.Core.Query
             _userService = userService;
         }
 
-        public async Task<bool> Handle(GetUserByEmailAndPasswordQuery request, CancellationToken cancellationToken)
+        public async Task<User> Handle(GetUserByEmailAndPasswordQuery request, CancellationToken cancellationToken)
         {
             return await _userService.GetUserByEmailAndPassword(request.Email, request.Password);
         }
