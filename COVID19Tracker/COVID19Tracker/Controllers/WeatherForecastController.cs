@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -7,8 +9,10 @@ using System.Threading.Tasks;
 
 namespace COVID19Tracker.Controllers
 {
+    [ApiVersion("1")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    //[Authorize("UserSecure")]
     [ApiController]
-    [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -24,6 +28,7 @@ namespace COVID19Tracker.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "UserSecure")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();

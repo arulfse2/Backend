@@ -49,3 +49,4 @@ C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Gateway\bin
 C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Gateway\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Gateway\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Gateway\obj\Debug\netcoreapp3.1\COVID19Tracker.Gateway.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Gateway\obj\Debug\netcoreapp3.1\COVID19Tracker.Gateway.csproj.CopyComplete

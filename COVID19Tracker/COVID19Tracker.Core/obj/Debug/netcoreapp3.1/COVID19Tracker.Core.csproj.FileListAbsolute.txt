@@ -1,10 +1,10 @@
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\bin\Debug\netcoreapp3.1\COVID19Tracker.Core.deps.json
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\bin\Debug\netcoreapp3.1\COVID19Tracker.Core.dll
+C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\bin\Debug\netcoreapp3.1\COVID19Tracker.Core.pdb
 C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\obj\Debug\netcoreapp3.1\COVID19Tracker.Core.csproj.AssemblyReference.cache
 C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\obj\Debug\netcoreapp3.1\COVID19Tracker.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\obj\Debug\netcoreapp3.1\COVID19Tracker.Core.AssemblyInfoInputs.cache
 C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\obj\Debug\netcoreapp3.1\COVID19Tracker.Core.AssemblyInfo.cs
 C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\obj\Debug\netcoreapp3.1\COVID19Tracker.Core.csproj.CoreCompileInputs.cache
-C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\bin\Debug\netcoreapp3.1\COVID19Tracker.Core.deps.json
-C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\bin\Debug\netcoreapp3.1\COVID19Tracker.Core.dll
-C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\bin\Debug\netcoreapp3.1\COVID19Tracker.Core.pdb
 C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\obj\Debug\netcoreapp3.1\COVID19Tracker.Core.dll
 C:\Users\User\Documents\GitHub\Backend\COVID19Tracker\COVID19Tracker.Core\obj\Debug\netcoreapp3.1\COVID19Tracker.Core.pdb

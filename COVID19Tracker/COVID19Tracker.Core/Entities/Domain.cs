@@ -1,10 +1,13 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 
 namespace COVID19Tracker.Core.Entities
 {
     public class Domain
     {
+        [BsonId]
+        public ObjectId Id { get; set; }
         [BsonElement]
         [BsonDefaultValue("ADMIN")]
         public string CreatedBy { get; set; }

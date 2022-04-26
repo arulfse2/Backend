@@ -1,14 +1,14 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson.Serialization.IdGenerators;
-using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace COVID19Tracker.Core.Entities
 {
     public class Role : Domain
     {
-        [BsonId(IdGenerator = typeof(CombGuidGenerator))]
+        //[BsonId(IdGenerator = typeof(CombGuidGenerator))]
+        [BsonElement]
         [BsonRequired]
-        public Guid Id { get; set; }
+        public string RoleId { get; set; }
         [BsonElement]
         [BsonRequired]
         public string Name { get; set; }

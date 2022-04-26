@@ -4,70 +4,86 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MediatR;
 using System.Reflection;
-using COVID19Tracker.Core.Contracts;
-using COVID19Tracker.Core.Repositories;
-using COVID19Tracker.Core.Query;
-using COVID19Tracker.Core.Entities;
+using COVID19Tracker.Core.Services;
 using Microsoft.Extensions.Configuration;
+using System.Security.Cryptography.X509Certificates;
+using System.IO;
+using Microsoft.AspNetCore.Http;
+using IdentityServer4.Models;
+using System.Security.Claims;
+using System.Collections.Generic;
+using IdentityServer4;
+using Microsoft.AspNetCore.Identity;
+using System;
 
 namespace COVID19Tracker.Auth
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            _environment = env;
         }
         public IConfiguration Configuration { get; }
+        public IWebHostEnvironment _environment { get; }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddIdentityServer(x =>
-            {
-                x.IssuerUri = "none";
-            }).AddInMemoryIdentityResources(Config.GetIdentityResources)
-              .AddInMemoryApiResources(Config.GetApiResources)
-              .AddInMemoryApiScopes(Config.GetApiScopes)
-              .AddInMemoryClients(Config.GetClients)
-              .AddDeveloperSigningCredential()
-              .AddAppUserStore();
-            services.AddMediatR(Assembly.GetExecutingAssembly());
-            services.AddOptions();
+            //var cert = new X509Certificate2(Path.Combine(_environment.ContentRootPath, "covid19authserver.pfx"), "");
             var userConfig = Configuration.GetSection("DatabaseSettings:UserConfig");
             services.Configure<UserConfig>(userConfig);
-            services.AddAutoMapper(typeof(Startup));
-            //services.AddSingleton<IMongoClient>(c => {
-            //    var ConnectionString = Configuration["DatabaseSettings:ConnectionString"];
-            //    return new MongoClient(ConnectionString);
-            //});
-            //services.AddScoped(c =>
-            //    c.GetService<IMongoClient>().StartSession());
-            services.AddTransient<IUserService, UserService>();
+            services.AddIdentityServer()
+                   .AddInMemoryIdentityResources(ServerConfig.Resources)
+                   .AddInMemoryApiResources(ServerConfig.Apis)
+                   .AddInMemoryApiScopes(ServerConfig.Scopes)
+                   .AddInMemoryClients(ServerConfig.Clients)
+                   //.AddTestUsers(ServerConfig.GetUsers)
+                   .AddDeveloperSigningCredential()
+                   .AddAppUserStore();
 
-            services.AddTransient<IRequestHandler<GetUserByEmailAndPasswordQuery, User>, GetUserByEmailAndPasswordQueryHandler>();
-            services.AddTransient<IRequestHandler<GetUserByEmailQuery, User>, GetUserByEmailQueryHandler>();
+            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddOptions();
+            services.AddAutoMapper(typeof(Startup));
+            services.AddControllers();
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("AnyOrigin", builder =>
+            //    {
+            //        builder
+            //            .AllowAnyOrigin()
+            //            .AllowAnyMethod();
+            //    });
+            //});
+            services.AddCors(m => m.AddPolicy("localhost", o =>
+                o.WithOrigins("http://localhost:6001", "https://localhost:6001")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+            ));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("localhost");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseRouting();
+            app.UseRouting();
+            app.UseStaticFiles();
             app.UseIdentityServer();
-            //app.UseAuthorization();
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapGet("/", async context =>
-            //    {
-            //        await context.Response.WriteAsync("Hello World!");
-            //    });
-            //});
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllers();
+            });
         }
     }
 }
