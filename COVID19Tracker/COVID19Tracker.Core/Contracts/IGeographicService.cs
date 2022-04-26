@@ -9,26 +9,26 @@ namespace COVID19Tracker.Core.Contracts
     {
         #region country
         Task<Country> AddCountry(Country country);
-        Task<Country> UpdateCountry(Country country, Guid countryId);
-        Task<bool> DeleteCountry(Guid countryId);
+        Task<Country> UpdateCountry(Country country, string countryId);
+        Task<bool> DeleteCountry(string countryId);
         Task<IEnumerable<Country>> GetAllCountry();
-        Task<Country> GetCountryById(Guid countryId);
+        Task<Country> GetCountryById(string countryId);
         #endregion country
 
         #region state
         Task<State> AddState(State state);
-        Task<State> UpdateState(State state, Guid stateId);
-        Task<bool> DeleteState(Guid stateId);
+        Task<State> UpdateState(State state, string stateId);
+        Task<bool> DeleteState(string stateId);
         Task<IEnumerable<State>> GetAllState();
-        Task<State> GetStateById(Guid stateId);
+        Task<State> GetStateById(string stateId);
         #endregion state
 
         #region city
         Task<City> AddCity(City city);
-        Task<City> UpdateCity(City city, Guid cityId);
-        Task<bool> DeleteCity(Guid cityId);
+        Task<City> UpdateCity(City city, string cityId);
+        Task<bool> DeleteCity(string cityId);
         Task<IEnumerable<City>> GetAllCity();
-        Task<City> GetCityById(Guid cityId);
+        Task<City> GetCityById(string cityId);
         #endregion city
     }
 }

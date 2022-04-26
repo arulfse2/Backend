@@ -8,10 +8,10 @@ namespace COVID19Tracker.Core.Contracts
     public interface ICovidInfoService
     {
         Task<CovidInfo> AddInfo(CovidInfo user);
-        Task<CovidInfo> UpdateInfo(CovidInfo input, Guid infoId);
-        Task<bool> DeleteInfo(Guid infoId);
+        Task<CovidInfo> UpdateInfo(CovidInfo input, string infoId);
+        Task<bool> DeleteInfo(string infoId);
         Task<IEnumerable<CovidInfo>> GetAllInfo();
-        Task<CovidInfo> GetInfoById(Guid infoId);
-        Task<IEnumerable<CovidInfo>> GetAllInfoByGeographic(Guid? countryId, Guid? stateId, Guid? cityId);
+        Task<CovidInfo> GetInfoById(string infoId);
+        Task<IEnumerable<CovidInfo>> GetAllInfoByGeographic(string? countryId, string? stateId, string? cityId);
     }
 }
